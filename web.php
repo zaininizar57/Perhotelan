@@ -24,7 +24,11 @@
             require_once "app/users/auth/layouts/header.php";
             require_once "app/users/auth/register.php";
             require_once "app/users/auth/layouts/footer.php";
-        } 
+        }elseif ($url[0] == 'users' && $url[1] == 'index') {
+            require_once "app/users/layouts/header.php";
+            require_once "app/users/index.php";
+            require_once "app/users/layouts/footer.php";
+        }
     }else {
         require_once "app/guest/layouts/header.php";
         require_once "app/welcome.php";
